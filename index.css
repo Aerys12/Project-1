@@ -3,7 +3,6 @@
 	grid-template-columns:
 		[custom-full-width-start] minmax(0px, 1fr) [content-start] min(100%, 70ch)
 		[content end] minmax(0px, 1fr) [custom-full-width-end];
-
 }
 
 .container-custom > * {
@@ -14,8 +13,25 @@
 	grid-column: custom-full-width;
 }
 
+.custom-scroller {
+	margin-block: 4rem;
+}
+
 .scroller__inner {
-	padding-block: 2rem;
+	width: 100%;
+	overflow-x: scroll;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	display: grid;
+	padding: 2rem 1rem;
+	gap: 1rem;
+	grid-auto-flow: column;
+	justify-items: center;
+	grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+.scroller__inner::-webkit-scrollbar {
+	display: none;
 }
 
 .hero {
