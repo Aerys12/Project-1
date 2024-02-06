@@ -1,0 +1,24 @@
+##Potentail pages 
+
+Home  
+About 
+Why Us
+Contact??
+Features 
+Login In/ signup 
+User Dashboard 
+User profile page
+Calendar 
+
+## Models 
+Users 
+Calendar
+Contact List 
+
+## Extra features 
+Login with google/apple/microsoft
+Google Calendar Intergration
+Apple Calender Intergration
+Zoom Intergration
+Microsoft teams Intergration
+Group meeting scheduler 
