@@ -13,12 +13,4 @@
 - Scheduling preferences and management
 - Static representation of scheduling functionality
 
-## Tech Stack
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap (CSS Framework)
-- FullCalendar (JavaScript library for interactive calendars)
-- Django (for Phase 2 and 3 - backend API)
-- React (for Phase 3 - frontend integration)
