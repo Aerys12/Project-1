@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+		<nav class="navbar navbar-expand-lg bg-success-subtle fixed-top">
 			<div class="container-fluid">
 				<a class="navbar-brand fs-4" href="#">1on1</a>
 				<button
@@ -52,22 +52,50 @@
 								<a class="nav-link active" aria-current="page" href="#">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="/about.html">About</a>
+								<a class="nav-link" href="/why.html">Why 1on1</a>
 							</li>
 						</ul>
-						<div class="d-flex gap-4">
-							<a class="btn btn-outline-success" href="/login.html">Login</a>
-							<a class="btn btn-success" href="/signup.html">Sign Up</a>
-						</div>
-						<div class="d-flex align-content-start">
-							<a href="/create.html" class="btn btn-primary mx-lg-4">Create</a>
+						<div>
+							<ul class="nav">
+								<li class="nav-item dropdown">
+									<a
+										class="btn btn-success dropdown-toggle"
+										href="#"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Create
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="/calendar.html">1on1</a>
+										</li>
+										<li>
+											<a class="dropdown-item text-success-emphasis" href="#"
+												>Group Polls</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-success-emphasis" href="/signup.html"
+										>Sign Up</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-success-emphasis" href="/login.html"
+										>Login</a
+									>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<main class="container-custom">
-			<section class="bg-body-tertiary hero custom-full-width">
+			<section class="hero custom-full-width bg-success-subtle">
 				<div class="text-center">
 					<h1 class="display-3">
 						Choose a time. Choose a person. Schedule it in your calendar.
@@ -84,7 +112,74 @@
 			</section>
 
 			<section class="custom-full-width">
-				<div class="container-custom text-center">
+				<div class="row align-items-center justify-content-center mx-sm-5">
+					<h1 class="display-4 text-center mt-5">
+						Scheduling solutions tailored for entrepreneurs, freelancers, and
+						leaders.
+					</h1>
+					<p class="lead text-center mb-sm-5">
+						1on1's made for teams of all sizes
+					</p>
+					<div
+						class="row justify-content-center align-items-center text-center gap-4 px-sm-5"
+					>
+						<div class="col-lg-3">
+							<div class="card border-success">
+								<div class="card-header bg-success text-white">
+									<i class="bi bi-person-workspace h2 text-bg-success p-1"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Individuals</h5>
+									<p class="card-text">
+										Maintain your calendars in sync and schedule meetings with
+										clients and teammates more swiftly.
+									</p>
+									<a href="/signup.html" class="btn btn-outline-success mb-3"
+										>Sign Up</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card border-success">
+								<div class="card-header bg-success text-white">
+									<i class="bi bi-person-plus h2 text-bg-success p-1"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Teams</h5>
+									<p class="card-text">
+										Include teammates in invitations and booking pages, and
+										utilize shared calendars for coordination.
+									</p>
+									<a href="/signup.html" class="btn btn-outline-success mb-3"
+										>Sign Up</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="card border-success">
+								<div class="card-header bg-success text-white">
+									<i class="bi bi-building h2 text-bg-success p-1"></i>
+								</div>
+								<div class="card-body">
+									<h5 class="card-title">Enterprise</h5>
+									<p class="card-text">
+										Securely oversee the scheduling requirements of your entire
+										organization.
+									</p>
+									<a href="/signup.html" class="btn btn-outline-success mb-3"
+										>Sign Up</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="custom-full-width">
+				<div class="container-custom text-center mt-5">
 					<h1 class="display-4">Simplify the process of arranging meetings</h1>
 					<p class="lead">
 						1on1 simplifies the process of scheduling by eliminating the need
@@ -94,10 +189,10 @@
 				</div>
 				<div class="custom-scroller">
 					<div class="scroller__inner">
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-send h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-send h2 text-bg-success p-1"></i>
 								</h5>
 								<h5 class="card-subtitle mb-2 text-body-secondary">
 									Send anyone a 1on1 link
@@ -109,10 +204,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-envelope h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-envelope h2 text-bg-success p-1"></i>
 								</h5>
 								<h5 class="card-subtitle mb-2 text-body-secondary">
 									Find a suitable time
@@ -123,10 +218,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-pencil-square h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-pencil-square h2 text-bg-success p-1"></i>
 								</h5>
 								<h5 class="card-subtitle mb-2 text-body-secondary">
 									Include the specifics
@@ -137,10 +232,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-check-square h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-check-square h2 text-bg-success p-1"></i>
 								</h5>
 								<h5 class="card-subtitle mb-2 text-body-secondary">Book it</h5>
 								<p class="card-text">
@@ -152,9 +247,78 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="custom-full-width bg-success py-5">
+				<div>
+					<h1 class="display-4 text-center text-white">
+						Designed to integrate seamlessly with your existing tools for
+						enhanced collaboration.
+					</h1>
+					<p class="lead text-center text-success-emphasis">
+						1on1 seamlessly connects with your preferred applications.
+					</p>
+				</div>
+				<div class="row gap-4 justify-content-center">
+					<div class="card col-4 border-success-subtle" style="width: 20rem">
+						<div class="card-body">
+							<h5 class="card-title mb-3">
+								<i class="bi bi-camera-video h2 text-success-emphasis p-1"></i>
+							</h5>
+							<h4 class="card-subtitle mb-2 text-body-secondary">Zoom</h4>
+							<p class="card-text">
+								Effortlessly incorporate Zoom video links into virtual meetings
+								arranged via 1on1.
+							</p>
+						</div>
+					</div>
+					<div class="card col-4 border-success-subtle" style="width: 20rem">
+						<div class="card-body">
+							<h5 class="card-title mb-3">
+								<i class="bi bi-microsoft h2 text-success-emphasis p-1"></i>
+							</h5>
+							<h4 class="card-subtitle mb-2 text-body-secondary">
+								Microsoft Teams
+							</h4>
+							<p class="card-text">
+								Automatically create conferencing links to simplify the process
+								of scheduling meetings.
+							</p>
+						</div>
+					</div>
+					<div class="card col-4 border-success-subtle" style="width: 20rem">
+						<div class="card-body">
+							<h5 class="card-title mb-3">
+								<i class="bi bi-google h2 text-success-emphasis p-1"></i>
+							</h5>
+							<h4 class="card-subtitle mb-2 text-body-secondary">
+								Google Calendar
+							</h4>
+							<p class="card-text">
+								Gain a clear perspective of your daily schedule and ensure all
+								your events are synchronized automatically.
+							</p>
+						</div>
+					</div>
+					<div class="card col-4 border-success-subtle" style="width: 20rem">
+						<div class="card-body">
+							<h5 class="card-title mb-3">
+								<i class="bi bi-apple h2 text-success-emphasis p-1"></i>
+							</h5>
+							<h4 class="card-subtitle mb-2 text-body-secondary">
+								Apple Calendar
+							</h4>
+							<p class="card-text">
+								Gain a clear overview of your daily schedule and automatically
+								synchronize all your events.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section class="custom-full-width">
 				<div class="container-custom text-center">
-					<h1 class="display-4">
+					<h1 class="display-4 mt-5">
 						The quickest method for scheduling work meetings
 					</h1>
 					<p class="lead">
@@ -164,10 +328,10 @@
 				</div>
 				<div class="custom-scroller">
 					<div class="scroller__inner">
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-send h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-send h2 text-bg-success p-1"></i>
 								</h5>
 								<h4 class="card-subtitle mb-2 text-body-secondary">
 									Invite anyone
@@ -179,10 +343,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-envelope h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-envelope h2 text-bg-success p-1"></i>
 								</h5>
 								<h4 class="card-subtitle mb-2 text-body-secondary">
 									Monitor who has replied
@@ -193,10 +357,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-check-square h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-check-square h2 text-bg-success p-1"></i>
 								</h5>
 								<h4 class="card-subtitle mb-2 text-body-secondary">Book it</h4>
 								<p class="card-text">
@@ -205,10 +369,10 @@
 								</p>
 							</div>
 						</div>
-						<div class="card bg-body-secondary" style="width: 20rem">
+						<div class="card border-success" style="width: 20rem">
 							<div class="card-body">
-								<h5 class="card-title">
-									<i class="bi bi-pencil-square h2 text-bg-primary p-1"></i>
+								<h5 class="card-title mb-3">
+									<i class="bi bi-pencil-square h2 text-bg-success p-1"></i>
 								</h5>
 								<h4 class="card-subtitle mb-2 text-body-secondary">
 									Include specifics
@@ -222,6 +386,7 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="custom-full-width">
 				<div class="text-center">
 					<h1 class="display-5">Scheduling can be done in a simpler way</h1>
@@ -236,8 +401,8 @@
 				</div>
 			</section>
 		</main>
-		<footer>
-			<p>Copyright by nsubugae</p>
+		<footer class="d-flex align-items-center justify-content-center bg-success">
+			<p class="text-white m-0">Copyright by nsubugae</p>
 		</footer>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

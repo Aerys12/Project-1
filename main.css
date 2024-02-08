@@ -1,3 +1,9 @@
+@import "bootstrap/scss/bootstrap";
+
+:root {
+	--bs-primary: indigo-500;
+}
+
 h1,
 h2,
 h3,
