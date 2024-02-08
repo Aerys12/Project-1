@@ -1,7 +1,16 @@
-@import "bootstrap/scss/bootstrap";
+.container-custom {
+	display: grid;
+	grid-template-columns:
+		[custom-full-width-start] minmax(0px, 1fr) [content-start] min(100%, 70ch)
+		[content end] minmax(0px, 1fr) [custom-full-width-end];
+}
 
-:root {
-	--bs-primary: indigo-500;
+.container-custom > * {
+	grid-column: content;
+}
+
+.container-custom > .custom-full-width {
+	grid-column: custom-full-width;
 }
 
 h1,
@@ -15,6 +24,11 @@ h6 {
 
 p {
 	text-wrap: pretty;
+}
+.hero {
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
 }
 
 footer {
