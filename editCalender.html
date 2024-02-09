@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,33 @@
 
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    
-     <!-- FullCalendar's CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- FullCalendar's CSS -->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@latest/main.min.css' rel='stylesheet' />
 
 
 </head>
+
 <body>
     <div class="container">
         <form id="create-meeting-form">
-            <h1>Create a new 1:1</h1>
-            
+            <h1>Edit your 1:1</h1>
+
             <label for="title">Title</label>
-            <input type="text" id="title" name="title" placeholder="What's the occasion?">
-            
+            <input type="text" id="title" name="title" value="CSC309 meeting">
+
             <label for="description">Description (optional)</label>
-            <textarea id="description" name="description" placeholder="Here you can include things like an agenda, instructions, or other details"></textarea>
-            
+            <textarea id="description" name="description">Meeting before phase1 is due</textarea>
+
             <label for="location">Location (optional)</label>
-            <input type="text" id="location" name="location" placeholder="Where will this happen?">
-            
+            <input type="text" id="location" name="location" value="Bahen Centre">
+
             <div class="video-conferencing">
                 <label for="video-conferencing">Video conferencing</label>
                 <input type="checkbox" id="video-conferencing" name="video-conferencing">
-                
+
                 <label for="select-tool">Select tool</label>
                 <select id="select-tool" name="select-tool">
                     <option value="zoom">Zoom</option>
@@ -40,17 +43,28 @@
                     <option value="microsoft-teams">Microsoft Teams</option>
                 </select>
             </div>
-        
-        
+
+
             <!-- Add your times -->
             <div class="container mt-4">
                 <h2>Add your times</h2>
                 <div class="btn-group my-3" role="group" aria-label="Duration">
                     <button type="button" class="btn btn-outline-primary">15 min</button>
                     <button type="button" class="btn btn-outline-primary">30 min</button>
-                    <button type="button" class="btn btn-outline-primary">60 min</button> 
+                    <button type="button" class="btn btn-primary">60 min</button> <!-- active -->
                     <button type="button" class="btn btn-outline-primary">All day</button>
                     <button type="button" class="btn btn-outline-primary">Custom</button>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <div>
+                        <button class="btn btn-outline-secondary">&lt;</button>
+                        <span class="mx-2">February 2024</span>
+                        <button class="btn btn-outline-secondary">&gt;</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-outline-secondary">Week</button>
+                        <button class="btn btn-primary">Month</button> <!-- active -->
+                    </div>
                 </div>
 
                 <!-- Calendar Structure -->
@@ -67,41 +81,49 @@
                     </ul>
                     <button class="btn btn-primary">+ Add times</button>
                 </div>
+                <div class="row justify-content-end mt-3">
+                    <div class="col-3">
+                        <a class="btn btn-success" href="#!">Save changes</a>
+                        <a class="btn btn-danger" href="#!">cancel</a>
+                    </div>
+                </div>
             </div>
-            <input type="submit" value="Create Meeting">
         </form>
     </div>
 
     <!-- Bootstrap JS and its dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
     <!-- FullCalendar JS -->
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
     <script>
 
-      document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
         });
-        calendar.render();
-      });
 
     </script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const durationButtons = document.querySelectorAll('.btn-group .btn');
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const durationButtons = document.querySelectorAll('.btn-group .btn');
 
-        durationButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                durationButtons.forEach(btn => btn.classList.remove('btn-primary'));
-                button.classList.add('btn-primary');
+            durationButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    durationButtons.forEach(btn => btn.classList.remove('btn-primary'));
+                    button.classList.add('btn-primary');
+                });
             });
         });
-    });
     </script>
 
 
 </body>
+
 </html>
