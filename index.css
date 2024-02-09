@@ -1,17 +1,4 @@
-.container-custom {
-	display: grid;
-	grid-template-columns:
-		[custom-full-width-start] minmax(0px, 1fr) [content-start] min(100%, 70ch)
-		[content end] minmax(0px, 1fr) [custom-full-width-end];
-}
 
-.container-custom > * {
-	grid-column: content;
-}
-
-.container-custom > .custom-full-width {
-	grid-column: custom-full-width;
-}
 
 .custom-scroller {
 	margin-block: 4rem;
@@ -34,9 +21,5 @@
 	display: none;
 }
 
-.hero {
-	min-height: 100vh;
-	display: grid;
-	place-items: center;
-}
+
 
