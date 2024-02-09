@@ -3,7 +3,8 @@
 	grid-template-columns:
 		[custom-full-width-start] minmax(0px, 1fr) [content-start] min(100%, 70ch)
 		[content end] minmax(0px, 1fr) [custom-full-width-end];
-}
+	
+	}
 
 .container-custom > * {
 	grid-column: content;
