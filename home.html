@@ -64,7 +64,8 @@
                 </div>
                 <div class="col-6 align-self-center">
                     <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Search">
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button"
+                            placeholder="Search">
                         <button class="btn btn-outline-secondary dropdown-toggle" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">All</button>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -83,7 +84,7 @@
             <div class="row m-2 border">
                 <div class="col-1 align-self-center mx-auto">
                     <i class="h1 bi bi-person-circle text-primary"></i>
-            </div>
+                </div>
                 <div class="col-8 my-2">
                     <h4 class="mt-2">Mat135 tutoring</h4>
                     <p class="m-1"><i class="bi bi-calendar3"></i> 3option</p>
@@ -98,7 +99,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><button data-bs-toggle="modal" data-bs-target="#shareMeetingModal"
-                                class="dropdown-item">Share</button></li>
+                                    class="dropdown-item">Share</button></li>
                             <li><a class="dropdown-item" href="editCalender.html">Edit</a></li>
                             <li><button data-bs-toggle="modal" data-bs-target="#deleteMeetingModal"
                                     class="dropdown-item">Delete</button></li>
@@ -123,7 +124,7 @@
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><button data-bs-toggle="modal" data-bs-target="#shareMeetingModal"
-                                class="dropdown-item">Share</button></li>
+                                    class="dropdown-item">Share</button></li>
                             <li><a class="dropdown-item" href="editCalender.html">Edit</a></li>
                             <li><button data-bs-toggle="modal" data-bs-target="#deleteMeetingModal"
                                     class="dropdown-item">Delete</button></li>
@@ -155,8 +156,8 @@
         </div>
     </div>
 
-        <!-- share Meeting Modal -->
-        <div class="modal fade" id="shareMeetingModal" tabindex="-1" aria-labelledby="shareMeetingModalLabel"
+    <!-- share Meeting Modal -->
+    <div class="modal fade" id="shareMeetingModal" tabindex="-1" aria-labelledby="shareMeetingModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -166,12 +167,54 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group flex-nowrap">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" value="https://www.1on1.com/meeting/participate/id/p1m43jk" disabled="disabled">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="addon-wrapping"
+                            value="https://www.1on1.com/meeting/participate/id/p1m43jk" disabled="disabled">
                         <span class="input-group-text" id="addon-wrapping"><i class="bi bi-link"></i></span>
-                      </div>
+                    </div>
+                    <div class="input-group flex-nowrap mt-2">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                            aria-describedby="addon-wrapping">
+                        <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
+                    </div>
+                    <div>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <th scope="row">
+                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                </th>
+                                <td>Michael James</td>
+                                <td>michael.james@google.com</td>
+                            </tbody>
+
+                            <tbody>
+                                <th scope="row">
+                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                </th>
+                                <td>John Won</td>
+                                <td>jong.won@google.com</td>
+                            </tbody>
+
+                            <tbody>
+                                <th scope="row">
+                                    <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+                                </th>
+                                <td>Emmanuel Nsubuga</td>
+                                <td>Emmanuel.Nsubuga@google.com</td>
+                            </tbody>
+                            
+                        </table>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Copy</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Send</button>
                 </div>
             </div>
         </div>
