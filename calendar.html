@@ -135,38 +135,31 @@
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-    var selectedDatesEl = document.querySelector('.selected-dates'); // This should be the container for the selected dates on the side
+    var selectedDatesEl = document.querySelector('.selected-dates'); 
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         dateClick: function(info) {
-            // Add code here to handle when a date is clicked
-            // For example, toggle the selection of the date and update the selected dates list
             var dateStr = info.dateStr; // '2024-02-09'
-            var date = new Date(dateStr + 'T00:00:00'); // Will create a Date object at midnight
+            var date = new Date(dateStr + 'T00:00:00'); 
 
             // Check if this date is already in the selectedDates array
             if(selectedDates.includes(dateStr)) {
-                // Remove it
                 selectedDates = selectedDates.filter(function(d) { return d !== dateStr; });
             } else {
-                // Add it
                 selectedDates.push(dateStr);
             }
-
-            // Now update the side container
             updateSelectedDates();
         },
-        // Additional FullCalendar options...
     });
     calendar.render();
 
-    // This function updates the side container with the selected dates
+
     function updateSelectedDates() {
-        selectedDatesEl.innerHTML = ''; // Clear the current list
+        selectedDatesEl.innerHTML = '';
         selectedDates.forEach(function(dateStr) {
-            var date = new Date(dateStr + 'T00:00:00'); // Convert to Date object
+            var date = new Date(dateStr + 'T00:00:00'); 
             var li = document.createElement('li');
-            li.textContent = formatDate(date); // You need to write this formatDate function
+            li.textContent = formatDate(date); 
             selectedDatesEl.appendChild(li);
         });
     }
@@ -188,7 +181,7 @@ var selectedDates = [];
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Populate all existing dropdowns with time options on page load
+  // Populate all existing dropdowns with time options
   const timeDropdowns = document.querySelectorAll('.time-dropdown');
   timeDropdowns.forEach(dropdown => {
     populateTimeOptions(dropdown);
@@ -197,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add click event to all 'Add times' buttons
   document.addEventListener('click', function(event) {
     if (event.target.classList.contains('add-time-btn')) {
-      event.preventDefault(); // Prevent the form from submitting
+      event.preventDefault(); 
       const parent = event.target.parentNode;
       const newDropdown = createDropdown();
       parent.insertBefore(newDropdown, event.target);
@@ -236,3 +229,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
+
