@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Schedule meeting</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-success-subtle">
+			<div class="container-fluid">
+				<a class="navbar-brand fs-4" href="/index.html">1on1</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar"
+					aria-controls="offcanvasNavbar"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="offcanvas offcanvas-end"
+					tabindex="-1"
+					id="offcanvasNavbar"
+					aria-labelledby="offcanvasNavbarLabel"
+				>
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">1on1</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="offcanvas"
+							aria-label="Close"
+						></button>
+					</div>
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="index.html"
+									>Home</a
+								>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/why.html">Why 1on1</a>
+							</li>
+						</ul>
+						<div>
+							<ul class="nav">
+								<li class="nav-item dropdown">
+									<a
+										class="btn btn-success dropdown-toggle"
+										href="#"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Create
+									</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="/calendar.html">1on1</a>
+										</li>
+										<li>
+											<a class="dropdown-item text-success-emphasis" href="#"
+												>Group Polls</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-success-emphasis" href="/signup.html"
+										>Sign Up</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link text-success-emphasis" href="/login.html"
+										>Login</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="container py-5">
+			<div class="row border justify-content-center align-items-center">
+				<div class="col-md-3 p-4">
+					<p>
+						<i class="bi bi-person-circle text-primary"></i>
+						<b>John Won</b>
+					</p>
+					<h5>CSC309 meeting</h5>
+
+					<h6><i class="bi bi-hourglass"></i> 1 hour</h6>
+					<h6><i class="bi bi-geo-alt"></i> Bahen Centre</h6>
+				</div>
+				<div class="col-md-9 h-100 border border-1 py-2">
+					<h1>Lets confirm your info</h1>
+					<p class="lead">Csc309 meeting with John on</p>
+					<h5>Friday, Febuary, 9 2024 at 10:00am</h5>
+					<h5>Canada, Toronto (GMT-5)</h5>
+					<a class="text-decoration-none" href="/scheduling.html"
+						>Change time</a
+					>
+					<form class="">
+						<div class="mb-3">
+							<label for="InputName1" class="form-label">Name</label>
+
+							<input
+								type="text"
+								class="form-control"
+								id="InputName1"
+								aria-describedby="nameHelp"
+							/>
+
+							<label for="InputEmail1" class="form-label">Email address</label>
+							<input
+								type="email"
+								class="form-control"
+								id="InputEmail1"
+								aria-describedby="emailHelp"
+							/>
+							<div id="emailHelp" class="form-text">
+								We'll never share your email with anyone else.
+							</div>
+						</div>
+
+						<a type="submit" class="btn btn-primary" href="final.html">Book it</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

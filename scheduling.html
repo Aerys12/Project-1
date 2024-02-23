@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Schedule meeting</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div class="container py-5">
+			<h2 class="text-center mb-4">Choose a time to book</h2>
+			<div class="row border justify-content-center align-items-center">
+				<div class="col-md-3 p-4">
+					<p>
+						<i class="bi bi-person-circle text-primary"></i>
+						<b>John Won</b>
+					</p>
+					<h5>CSC309 meeting</h5>
+
+					<h6><i class="bi bi-hourglass"></i> 1 hour</h6>
+					<h6><i class="bi bi-geo-alt"></i> Bahen Centre</h6>
+				</div>
+				<div class="col-md-6 p-md-2">
+					<div id="calendar"></div>
+				</div>
+				<div class="col-md-3 p-2">
+					<div>
+						<h6><i class="bi bi-globe"></i> Canada, Toronto(GMT-5)</h6>
+
+						<div class="selected-dates p-3">
+							<h6>Friday, Feb 9</h6>
+
+							<ul class="nav flex-column gap-2 text-center">
+								<li class="nav-item">
+									<a
+										class="nav-link border text-black"
+										aria-current="page"
+										href="scheduleLoggedIn.html"
+										>10:00am</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link border text-black" href="/final.html"
+										>12:00pm</a
+									>
+								</li>
+								<li class="nav-item">
+									<a
+										class="nav-link border text-black"
+										href="scheduleLoggedOut.html"
+										>2:00pm</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="d-flex justify-content-center mt-3">
+					<a href="home.html" class="btn btn-primary">Back to main</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Bootstrap JS -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<!-- FullCalendar JS -->
+		<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var calendarEl = document.getElementById("calendar");
+				var calendar = new FullCalendar.Calendar(calendarEl, {
+					initialView: "dayGridMonth",
+				});
+				calendar.render();
+			});
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", (event) => {
+				const durationButtons = document.querySelectorAll(".btn-group .btn");
+
+				durationButtons.forEach((button) => {
+					button.addEventListener("click", () => {
+						durationButtons.forEach((btn) =>
+							btn.classList.remove("btn-primary")
+						);
+						button.classList.add("btn-primary");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
