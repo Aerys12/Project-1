@@ -56,19 +56,48 @@
                 <!-- Calendar Structure -->
                 <div id='calendar'></div>
 
+                <!-- Selected Dates Section -->
+<div class="selected-dates-container">
+  <h5>Selected dates:</h5>
+  
+  <!-- Example Date Entry -->
+  <div class="date-entry">
+    <strong>Friday, 9 February</strong>
+    <div class="time-entries">
+      <!-- Static Start Time Dropdown -->
+      <select class="form-select time-dropdown">
+        <!-- 24-hour times in 15-minute increments -->
+        <!-- Generate this list with JavaScript in a dynamic solution -->
+        <option value="00:00">12:00 AM</option>
+        <option value="00:15">12:15 AM</option>
+        <!-- Add all other times here -->
+        <option value="23:45">11:45 PM</option>
+      </select>
+      <!-- Add button -->
+      <button class="btn btn-primary add-time-btn">+ Add times</button>
+    </div>
+  </div>
+  
+  <!-- Add more date entries as needed -->
+  
+</div>
+
+
+
+
+
+
+
+
+
+
                 <!-- Selected Dates List -->
                 <div class="selected-dates p-3 border rounded">
                     <h5>Selected dates:</h5>
-                    <p>Wednesday, 7 February</p>
-                    <ul class="list-unstyled">
-                        <li>10:30 AM</li>
-                        <li>6:00 PM</li>
-                        <li>10:15 PM</li>
-                    </ul>
                     <button class="btn btn-primary">+ Add times</button>
                 </div>
-            <a class="btn btn-primary btn-block mt-2" href="home.html">Create Meeting</a>
             </div>
+            <input type="submit" value="Create Meeting">
         </form>
     </div>
 
@@ -101,6 +130,108 @@
         });
     });
     </script>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var selectedDatesEl = document.querySelector('.selected-dates'); // This should be the container for the selected dates on the side
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        dateClick: function(info) {
+            // Add code here to handle when a date is clicked
+            // For example, toggle the selection of the date and update the selected dates list
+            var dateStr = info.dateStr; // '2024-02-09'
+            var date = new Date(dateStr + 'T00:00:00'); // Will create a Date object at midnight
+
+            // Check if this date is already in the selectedDates array
+            if(selectedDates.includes(dateStr)) {
+                // Remove it
+                selectedDates = selectedDates.filter(function(d) { return d !== dateStr; });
+            } else {
+                // Add it
+                selectedDates.push(dateStr);
+            }
+
+            // Now update the side container
+            updateSelectedDates();
+        },
+        // Additional FullCalendar options...
+    });
+    calendar.render();
+
+    // This function updates the side container with the selected dates
+    function updateSelectedDates() {
+        selectedDatesEl.innerHTML = ''; // Clear the current list
+        selectedDates.forEach(function(dateStr) {
+            var date = new Date(dateStr + 'T00:00:00'); // Convert to Date object
+            var li = document.createElement('li');
+            li.textContent = formatDate(date); // You need to write this formatDate function
+            selectedDatesEl.appendChild(li);
+        });
+    }
+});
+
+// Helper function to format dates as "Friday, 9 February"
+function formatDate(date) {
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
+}
+
+// Initial array to keep track of selected dates
+var selectedDates = [];
+
+    </script>
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Populate all existing dropdowns with time options on page load
+  const timeDropdowns = document.querySelectorAll('.time-dropdown');
+  timeDropdowns.forEach(dropdown => {
+    populateTimeOptions(dropdown);
+  });
+
+  // Add click event to all 'Add times' buttons
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('add-time-btn')) {
+      event.preventDefault(); // Prevent the form from submitting
+      const parent = event.target.parentNode;
+      const newDropdown = createDropdown();
+      parent.insertBefore(newDropdown, event.target);
+    }
+  });
+
+  function createDropdown() {
+    const select = document.createElement('select');
+    select.className = 'form-select time-dropdown';
+    populateTimeOptions(select);
+    return select;
+  }
+
+  function populateTimeOptions(dropdown) {
+    for (let hour = 0; hour < 24; hour++) {
+      for (let minute = 0; minute < 60; minute += 15) {
+        const value = `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        const display = formatTime(value);
+        dropdown.options.add(new Option(display, value));
+      }
+    }
+  }
+
+  function formatTime(value) {
+    const [hour, minute] = value.split(':');
+    const h = parseInt(hour, 10);
+    const suffix = h >= 12 ? 'PM' : 'AM';
+    const formattedHour = ((h + 11) % 12 + 1);
+    return `${formattedHour}:${minute} ${suffix}`;
+  }
+});
+
+
+</script>
 
 
 </body>
